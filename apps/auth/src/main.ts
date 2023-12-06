@@ -11,8 +11,10 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   app.connectMicroservice({
     transport: Transport.TCP,
-    options: { host: '0.0.0.0' }, //Listen to, bind to all interfaces on the host
-    port: configService.get('TCP_PORT'),
+    options: {
+      host: '0.0.0.0', //Listen to, bind to all interfaces on the host
+      port: configService.get('TCP_PORT'),
+    },
   });
 
   app.use(cookieParser());
