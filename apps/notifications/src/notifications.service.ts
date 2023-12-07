@@ -5,5 +5,6 @@ import { NotifyEmailDto } from './dto/notify-email.dto';
 export class NotificationsService {
   async notifyEmail(email: NotifyEmailDto) {
     console.log(email);
+    //send the email here
   }
 }
